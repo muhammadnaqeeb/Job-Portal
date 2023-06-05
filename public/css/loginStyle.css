@@ -1,0 +1,243 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Roboto:wght@300;400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+}
+
+:root {
+  --background: #f7f7f7;
+  --primary: #000000;
+  --secondary: #cccccc;
+  --sec-text: grey;
+  --active: #0266ff;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+}
+
+input,
+input:active,
+input:focus {
+  border: none;
+  background-color: var(--background);
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.form-container {
+  height: 100%;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.6rem;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Roboto";
+}
+
+.intro p {
+  font-size: 1rem;
+  font-family: "Roboto";
+  color: var(--sec-text);
+}
+
+.outro {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.social-btn {
+  height: 48px;
+  width: 48px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 120ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.social-btn p {
+  display: none;
+}
+
+.social-btn:hover {
+  width: 100px;
+  border-radius: 100px;
+  transition: all 120ms cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.social-btn:hover p {
+  display: block;
+  font-family: "Poppins";
+  color: white;
+  font-weight: 500;
+}
+
+#a-btn {
+  background-image: url(https://www.svgrepo.com/download/494331/apple-round.svg);
+}
+
+#a-btn:hover {
+  background-image: none;
+  background-color: #000000;
+}
+
+#fb-btn {
+  background-image: url(https://www.svgrepo.com/download/448224/facebook.svg);
+}
+
+#fb-btn:hover {
+  background-image: none;
+  background-color: #1877f2;
+}
+
+#g-btn {
+  background-image: url(https://www.svgrepo.com/download/448227/google.svg);
+}
+
+#g-btn:hover {
+  background-image: none;
+  background-color: #ea4335;
+}
+
+.outro p {
+  font-size: 0.8rem;
+  font-family: "Roboto";
+  color: var(--sec-text);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.email-input {
+  border: solid var(--secondary) 2px;
+  border-radius: 12px;
+  display: flex;
+  padding: 1rem 3rem 1rem 3rem;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.email-input:focus-within {
+  border: solid 2px var(--active);
+  transition: border 100ms ease-in;
+}
+
+#seperator {
+  border-left: 1px solid var(--secondary);
+  height: 100%;
+}
+
+#divider {
+  border-top: 1px solid var(--secondary);
+  width: 100%;
+}
+
+.icon-size {
+  font-size: 24px;
+}
+
+.sub-title {
+  font-family: "Roboto";
+  font-size: small;
+  font-weight: 500;
+  color: var(--sec-text);
+}
+
+#submit {
+  font-family: "Poppins", sans-serif;
+  font-size: small;
+  font-weight: 500;
+  width: 100%;
+  background-color: var(--active);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 3rem 1rem 3rem;
+}
+
+#submit:hover {
+  background-color: #0048b4;
+}
+
+#submit:active {
+  background-color: #0266ff;
+}
+
+.login-side-bg {
+  height: 100%;
+  width: 40%;
+  background-image: url("../images/login_img.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 700px) {
+  .login-side-bg {
+    display: none;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+
+  #email-icon {
+    display: none;
+  }
+
+  #seperator {
+    display: none;
+  }
+
+  .email-input {
+    padding: 1rem;
+  }
+}

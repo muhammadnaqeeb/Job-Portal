@@ -1,0 +1,63 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+}
+
+.mainContainer {
+    margin: 30px 25% 50px 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 5%;
+    border-radius: 1xp;
+    border-radius: 13px;
+
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+h1 {
+    font-size: 2.0rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+input {
+    width: 100%;
+    outline: 0;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    padding: 12px;
+    font-size: clamp(15px, 1.5vw, 18px);
+    border-radius: 12px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#submit {
+    font-family: "Poppins", sans-serif;
+    font-size: small;
+    font-weight: 500;
+    width: 100%;
+    background-color: #0266ff;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 3rem 1rem 3rem;
+}
+
+@media (max-width:680px) {
+    .hero-section {
+
+        padding: 21% 0% 2% 0%;
+
+    }
+
+    .mainContainer {
+        margin: 30px 5% 50px 5%;
+    }
+}
