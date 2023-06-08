@@ -11,8 +11,7 @@ class JobListController extends Controller
         return view('jobList');
     }
 
-    public function DisplayJobList(){
-        
+    public function DisplayJobList(){ 
         $joblistmodel = joblistModel::all();
         return view('jobList')->with('jobListData', $joblistmodel);
     }
@@ -31,7 +30,6 @@ class JobListController extends Controller
         $job->job_application_deadline = $req['jobApplicationDeadline'];
         $job->job_contact = $req['jobContact'];
         $job->save();
-        echo "Job Added Successfully";
+        return view("success");
     }
-
 }
